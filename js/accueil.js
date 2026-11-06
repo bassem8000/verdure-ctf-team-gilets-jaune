@@ -5,6 +5,8 @@
    Le tableau des plantes s'appelle « plantes » (voir plantes.js).
    ================================================= */
 
-function nbPlantes() {
-   document.getElementById("nb-plantes").innerHTML = plantes.length;
+const nbPlantes = document.querySelector("#nb-plantes")
+
+if (nbPlantes) {
+   nbPlantes.textContent = plantes.length;
 }
