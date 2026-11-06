@@ -26,10 +26,23 @@ if (catalogue) {
       
       const titre = document.createElement("h3");
       titre.textContent = plante.nom;
+      const boutonPanier = document.createElement("button");
+      boutonPanier.textContent = "Ajouter au panier";
       
       const prix = document.createElement("p");
       prix.textContent = euros(plante.prix);
-      article.append(titre, prix, lien);
+      article.append(titre, prix, lien, boutonPanier);
       catalogue.append(article);
+
+      boutonPanier.addEventListener("click", () => {
+         const panier = document.querySelector("#panier-lignes");
+         const li = document.createElement("li");
+         const cptPanier = document.querySelector("#compteur-panier");
+         li.textContent = `${plante.nom}`;
+         li.dataset.ligneId = plante.id;
+         cptPanier.textContent = parseInt(cptPanier.textContent) + 1;
+
+         panier.append(li);
+      });
    });
 }
