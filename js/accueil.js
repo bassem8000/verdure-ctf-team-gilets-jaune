@@ -5,6 +5,7 @@
    Le tableau des plantes s'appelle « plantes » (voir plantes.js).
    ================================================= */
 
+let total = 0.00;  
 const nbPlantes = document.querySelector("#nb-plantes")
 
 if (nbPlantes) {
@@ -38,10 +39,12 @@ if (catalogue) {
          const panier = document.querySelector("#panier-lignes");
          const li = document.createElement("li");
          const cptPanier = document.querySelector("#compteur-panier");
+         const totalPanier = document.querySelector("#panier-total");
          li.textContent = `${plante.nom}`;
          li.dataset.ligneId = plante.id;
          cptPanier.textContent = parseInt(cptPanier.textContent) + 1;
-
+         total += plante.prix;
+         totalPanier.textContent = euros(total);
          panier.append(li);
       });
    });
