@@ -19,6 +19,10 @@ if (catalogue) {
       const article = document.createElement("article");
       article.classList.add("plante");
       article.dataset.planteId = plante.id;
+
+      const lien = document.createElement("a");
+      lien.href = `plante.html?id=${plante.id}`;
+      article.append(lien);
       
       const titre = document.createElement("h3");
       titre.textContent = plante.nom;
