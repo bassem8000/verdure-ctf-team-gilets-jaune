@@ -22,14 +22,14 @@ if (catalogue) {
 
       const lien = document.createElement("a");
       lien.href = `plante.html?id=${plante.id}`;
-      article.append(lien);
+      lien.textContent = "Voir la fiche";
       
       const titre = document.createElement("h3");
       titre.textContent = plante.nom;
       
       const prix = document.createElement("p");
       prix.textContent = euros(plante.prix);
-      article.append(titre, prix);
+      article.append(titre, prix, lien);
       catalogue.append(article);
    });
 }
