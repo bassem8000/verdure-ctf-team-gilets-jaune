@@ -21,3 +21,9 @@ function idDansURL() {
 /* ---------- Votre code commun à toutes les pages ---------- */
 // Défi J03 : le bouton #bouton-theme est sur toutes les pages.
 
+const boutonTheme = document.querySelector("#bouton-theme");
+if (boutonTheme) {
+  boutonTheme.addEventListener("click", () => {
+    document.body.classList.toggle("sombre");
+  });
+}
