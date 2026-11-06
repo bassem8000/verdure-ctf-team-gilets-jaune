@@ -7,4 +7,4 @@
    Ne changez plus ce nom une fois le TP commencé :
    vos flags en dépendent.
    ================================================= */
-window.CTF_GROUPE = "a-renseigner";
+window.CTF_GROUPE = "team-gilets-jaune";
